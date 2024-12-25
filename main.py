@@ -79,23 +79,44 @@ def create_contact(contacts):
 
 
 def find_contact(contacts):
-    """Find contact by name or phone number"""
+    """Find contact by specific field or across all fields"""
     if not contacts:
         print("\nNo contacts to search")
         return
 
-    search_term = input("\nEnter name or phone number to search: ").strip().lower()
+    print("\nSearch options:")
+    print("1. Search by name")
+    print("2. Search by phone")
+    print("3. Search by comment")
+    print("4. Search in all fields")
+
+    search_option = input("\nChoose search option (1-4): ").strip()
+
+    if search_option not in ['1', '2', '3', '4']:
+        print("Invalid option!")
+        return
+
+    search_term = input("\nEnter search term: ").strip().lower()
     found_contacts = []
 
     for contact in contacts:
-        if (
-            search_term in contact["name"].lower()
-            or search_term in contact["phone"].lower()
-        ):
-            found_contacts.append(contact)
+        if search_option == '1':  # Search by name
+            if search_term in contact["name"].lower():
+                found_contacts.append(contact)
+        elif search_option == '2':  # Search by phone
+            if search_term in contact["phone"].lower():
+                found_contacts.append(contact)
+        elif search_option == '3':  # Search by comment
+            if search_term in contact["comment"].lower():
+                found_contacts.append(contact)
+        else:  # Search in all fields
+            if (search_term in contact["name"].lower() or
+                search_term in contact["phone"].lower() or
+                search_term in contact["comment"].lower()):
+                found_contacts.append(contact)
 
     if found_contacts:
-        print("\nFound contacts:")
+        print(f"\nFound {len(found_contacts)} contact(s):")
         for contact in found_contacts:
             print(f"\nID: {contact['id']}")
             print(f"Name: {contact['name']}")
