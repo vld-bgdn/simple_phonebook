@@ -10,12 +10,11 @@ This is a simple Python phone book application with following functionality:
 
 ## Features
 - The program creates a working copy of contacts when loaded
-- When editing a contanct, only the filled field is updated
-- Changes are only saved to file when explicitly requested
 - Program autosave unsaved changes before exit
 - Input validation prevents crashes from invalid input
 - Each contact has a unique ID for easy reference
-- Search function works with both names and phone numbers
+- Search function works with both names,phone numbers and comments
+- When editing a contact, only the filled field is updated
 - Edit function allows keeping existing values
 - Delete function requires confirmation
 
