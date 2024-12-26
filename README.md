@@ -4,7 +4,7 @@ This is a simple Python phone book application with following functionality:
 - Allows creating, reading, updating, and deleting contacts
 - Saves data to a JSON file
 - Provides search functionality
-- Includes input validation and error handling
+- Includes error handling
 - Has a text menu interface
 
 
