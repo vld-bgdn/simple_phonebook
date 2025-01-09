@@ -14,7 +14,7 @@ def load_phonebook(filename):
         return []
 
 
-def save_phonebook(contacts, filename):
+def save_phonebook(contacts: str, filename: str) -> bool:
     """Save contacts to JSON file"""
     try:
         with open(filename, "w", encoding="utf-8") as file:
