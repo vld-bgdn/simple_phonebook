@@ -21,7 +21,7 @@ This is a simple Python phone book application with following functionality:
 
 ## How to use
 - Run the script
-- Use the menu options 1-6 to manage contacts
-- Exit safely with option 6
+- Use the menu options to manage contacts
+- Exit safely
 
 The program will create a phonebook.json file in the same directory if it doesn't exist.
