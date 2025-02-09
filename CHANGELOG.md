@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 ( 09 Feb 2025)
+
+### Features
+
+- Added unit tests
+
 ## 0.2.0 ( 26 Jan 2025)
 
 ### Features

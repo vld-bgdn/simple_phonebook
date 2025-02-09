@@ -1,12 +1,13 @@
+from typing import Optional
 from model import Contact, FileHandler
 from view import View
 import text_en as text
 
 
 class Phonebook:
-    def __init__(self):
-        self.file_handler = FileHandler()
-        self.view = View()
+    def __init__(self, file_handler: Optional[FileHandler] = None, view: Optional[View] = None):
+        self.file_handler = file_handler if file_handler is not None else FileHandler()
+        self.view = view if view is not None else View()
         self.contacts = []
         self.modified = False
         self.load_contacts()

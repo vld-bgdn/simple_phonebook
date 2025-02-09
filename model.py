@@ -2,6 +2,7 @@ import json
 from config import PATH
 import text_en as text
 
+
 class Contact:
     def __init__(self, id: int, name: str, phone: str, comment: str = ""):
         self.id = id
@@ -25,6 +26,7 @@ class Contact:
             "phone": self.phone,
             "comment": self.comment
         }
+
 
 class FileHandler:
     def __init__(self, filename: str = PATH):
