@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2 ( 10 Feb 2025)
+
+### Features
+
+- Rewrote tests config into fixtures
+- Added annotations and docstrings for test functions
+
 ## 0.2.1 ( 09 Feb 2025)
 
 ### Features
